@@ -18,7 +18,7 @@ const CryptoToFiatLoans = () => {
                     Coming soon!
                 </h2>
                 <p className="text-sm sm:text-base text-[#4F4F4F] font-[400] mb-1">
-                    Cash to Crypto is almost here.
+                    Crypto to Fiat Loan is almost here.
                 </p>
                 <p className="text-sm sm:text-base text-[#4F4F4F] font-[400]">
                     Enter your email and we&apos;ll let you know the moment it&apos;s live.
