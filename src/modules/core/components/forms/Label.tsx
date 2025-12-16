@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "@/modules/core/lib/utils";
 
 interface LabelProps {
     label:        string;
@@ -9,7 +10,7 @@ interface LabelProps {
 const Label: React.FC<LabelProps> = ({ label, name, className }) => {
     return (
         <label
-            className={`label text-base leading-base font-medium mb-2.5 block text-primary ${className}`}
+            className={cn("label text-base leading-base font-medium mb-2.5 block text-primary", className)}
             id={name}
         >
             { label }

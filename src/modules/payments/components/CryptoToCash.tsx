@@ -8,8 +8,8 @@ import { cryptoToCashValidation } from "../validation";
 type CryptoToCashFormValues = {
     payFrom: string;
     payTo: string;
-    amount: number;
-    receiveAmount: number;
+    amount: string | number;
+    receiveAmount: string | number;
     amountCurrency: string;
     receiveAmountCurrency: string;
 }
@@ -28,10 +28,10 @@ const CryptoToCash = () => {
                 initialValues={{
                     payFrom: "",
                     payTo: "",
-                    amount: 1.0,
-                    receiveAmount: 1.0,
-                    amountCurrency: "",
-                    receiveAmountCurrency: "",
+                    amount: "1.00",
+                    receiveAmount: "1.00",
+                    amountCurrency: "eth",
+                    receiveAmountCurrency: "usdt-celo",
                 }}
                 onSubmit={handleSubmit}
                 validationSchema={cryptoToCashValidation}

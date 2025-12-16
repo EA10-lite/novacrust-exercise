@@ -27,30 +27,31 @@ const CashToCrypto = () => {
                 </p>
             </div>
 
-
-            <Formik
-                initialValues={{ email: "" }}
-                onSubmit={handleSubmit}
-                validationSchema={subscribeValidation}
-            >
-                {()=> (
-                    <div className="max-w-md mx-auto">
-                        <div className="mb-[64px]">
-                            <Field
-                                name="email"
-                                type="email"
-                                label="Email"
-                                placeholder="Enter your email"
-                                disabled={loading}
+            <div className="">
+                <Formik
+                    initialValues={{ email: "" }}
+                    onSubmit={handleSubmit}
+                    validationSchema={subscribeValidation}
+                >
+                    {()=> (
+                        <div className="">
+                            <div className="mb-[64px]">
+                                <Field
+                                    name="email"
+                                    type="email"
+                                    label="Email"
+                                    placeholder="Enter your email"
+                                    disabled={loading}
+                                />
+                            </div>
+                            <Submit
+                                title="Update me"
+                                loading={loading}
                             />
                         </div>
-                        <Submit
-                            title="Update me"
-                            loading={loading}
-                        />
-                    </div>
-                )}
-            </Formik>
+                    )}
+                </Formik>
+            </div>
         </div>
     )
 }
