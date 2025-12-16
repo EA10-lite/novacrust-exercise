@@ -31,7 +31,7 @@ export function PaymentTabs() {
                         <span className="whitespace-nowrap">Crypto to fiat loan</span>
                     </TabsTrigger>
                 </TabsList>
-                <div className="min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
+                <div className="min-h-[400px] sm:min-h-[500px] md:min-h-[700px]">
                     <TabsContent value="crypto-to-cash" className="mt-0">
                         <CryptoToCash />
                     </TabsContent>
