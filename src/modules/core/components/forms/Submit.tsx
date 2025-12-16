@@ -13,7 +13,7 @@ const Submit: React.FC<SubmitProps> = ({ title, loading, disabled }) => {
 
     return (
         <button
-            className="form-btn bg-primary flex items-center gap-2 sm:gap-3 justify-center  rounded-[30px] py-4 px-6 sm:py-5 sm:px-8 md:py-[20px] md:px-[40px] text-white whitespace-nowrap cursor-pointer text-sm sm:text-base leading-base font-[700] w-full"
+            className="form-btn bg-primary flex items-center gap-2 sm:gap-3 justify-center  rounded-[35px] py-4 px-6 sm:py-5 sm:px-8 md:py-[20px] md:px-[40px] text-[#E6FBF2] whitespace-nowrap cursor-pointer text-sm sm:text-base leading-base font-[700] w-full"
             type="submit"
             onClick={()=> handleSubmit()}
             disabled={disabled ? disabled : loading}
