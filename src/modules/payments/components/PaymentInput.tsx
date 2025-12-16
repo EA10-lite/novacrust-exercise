@@ -16,7 +16,6 @@ const PaymentInput = ({
     const { values, setFieldValue , errors, touched } = useFormikContext<FormikValues>();
     const currencyName = currencyFieldName || `${name}Currency`;
 
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputValue = e.target.value;
         if (inputValue === "" || inputValue === ".") {
@@ -29,19 +28,18 @@ const PaymentInput = ({
         }
     };
 
-
     return (
-        <div className="mb-5">
-            <div className={`rounded-[24px] border p-[24px] ${errors[name] && touched[name] ? "border-error" : " border-[#E0E0E0]"}`}>
+        <div className="mb-4 sm:mb-5">
+            <div className={`rounded-[16px] sm:rounded-[24px] border p-4 sm:p-6 md:p-[24px] ${errors[name] && touched[name] ? "border-error" : " border-[#E0E0E0]"}`}>
                 <Label
                     name={name}
                     label={label}
                     className="text-[#828282] mb-0"
                 />
 
-                <div className="flex items-center gap-2 justify-between">
+                <div className="flex items-center gap-2 sm:gap-3 justify-between mt-2">
                     <input
-                        className="flex-1 text-black text-2xl font-[600]"
+                        className="flex-1 text-black text-xl sm:text-2xl font-[600] min-w-0"
                         type="text"
                         inputMode="decimal"
                         value={values[name]}

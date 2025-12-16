@@ -17,7 +17,7 @@ export const PAYMENT_OPTIONS = [
         icon: "/assets/images/wallet-connect.svg",
     },
     {
-        title: "Others",
+        title: "Other Crypto Wallets (Binance, Conibase, Bybit etc)",
         value: "other",
         icon: "/assets/images/others.svg",
     },

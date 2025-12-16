@@ -23,7 +23,7 @@ const CryptoToCash = () => {
         setLoading(false);
     }
     return (
-        <div className="py-[32px]">
+        <div className="py-4 sm:py-6 md:py-[32px]">
             <Formik
                 initialValues={{
                     payFrom: "",
@@ -38,7 +38,7 @@ const CryptoToCash = () => {
             >
                 {()=> (
                     <div className="">
-                        <div className="mb-[32px]">
+                        <div className="mb-6 sm:mb-8 md:mb-[32px]">
                             <PaymentInput
                                 name="amount"
                                 label="You pay"
