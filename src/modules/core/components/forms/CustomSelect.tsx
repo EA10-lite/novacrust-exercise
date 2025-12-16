@@ -55,7 +55,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder, label
                         ${ errors[name] && touched[name] ? "border-error text-error bg-opacity-50 text-black error-input" : "border-[#E0E0E0]" }
                     `}
                     style={{
-                        padding: "24px"
+                        padding: "24px",
                     }}
                     ref={inputRef}
                     onFocus={handleFocus}
@@ -67,7 +67,12 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, placeholder, label
                         className="text-secondary text-left text-xs sm:text-sm leading-base font-[500]"
                     />
                 </SelectTrigger>
-                <SelectContent className="w-[98%] mx-auto bg-white border-none">
+                <SelectContent 
+                    className="w-[98%] mx-auto bg-white border border-[#E0E0E0] top-[40px]"
+                    style={{
+                        boxShadow: "none"
+                    }}
+                >
                     <SelectGroup>
                         { options?.map((option, index) => (
                             <SelectItem
