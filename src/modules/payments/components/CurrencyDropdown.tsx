@@ -48,6 +48,9 @@ export function CurrencyDropdown({ value, onChange }: CurrencyDropdownProps) {
             <DropdownMenuContent
                 align="end"
                 className="w-[200px] sm:w-[224px] rounded-[16px] sm:rounded-[20px] px-3 sm:px-[12px] py-3 sm:py-[16px]"
+                style={{
+                    boxShadow: "none"
+                }}
             >
                 <div className="relative">
                     <Search className="absolute left-2.5 sm:left-3 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#828282]" />
