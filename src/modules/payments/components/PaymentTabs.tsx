@@ -6,6 +6,7 @@ import {
 } from "@/modules/core/components/ui/tabs"
 import CashToCrypto from "./CashToCrypto"
 import CryptoToCash from "./CryptoToCash"
+import CryptoToFiatLoans from "./CryptoToFiatLoans"
 
 export function PaymentTabs() {
     return (
@@ -39,6 +40,7 @@ export function PaymentTabs() {
                         <CashToCrypto />
                     </TabsContent>
                     <TabsContent value="crypto-to-fiat-loan" className="mt-0">
+                        <CryptoToFiatLoans />
                     </TabsContent>
                 </div>
             </Tabs>

@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import { subscribeValidation } from "../validation";
 import { useState } from "react";
 
-const CashToCrypto = () => {
+const CryptoToFiatLoans = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const handleSubmit = async (values: { email: string }) => {
         console.log(values);
@@ -54,4 +54,4 @@ const CashToCrypto = () => {
     )
 }
 
-export default CashToCrypto;
+export default CryptoToFiatLoans;
