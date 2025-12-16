@@ -1,8 +1,18 @@
 import { Field, Submit } from "@/modules/core/components/forms";
 import { Formik } from "formik";
+import { subscribeValidation } from "../validation";
+import { useState } from "react";
 
 
 const CashToCrypto = () => {
+
+    const [loading, setLoading] = useState<boolean>(false);
+    const handleSubmit = async (values: { email: string }) => {
+        console.log(values);
+        setLoading(true);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setLoading(false);
+    }
     return (
         <div className="py-[64px]">
             <div className="text-center mb-[32px]">
@@ -20,24 +30,23 @@ const CashToCrypto = () => {
 
             <Formik
                 initialValues={{ email: "" }}
-                onSubmit={(values)=> {
-                    console.log(values);
-                }}
+                onSubmit={handleSubmit}
+                validationSchema={subscribeValidation}
             >
                 {()=> (
-                    <div className="">
+                    <div className="max-w-md mx-auto">
                         <div className="mb-[64px]">
                             <Field
                                 name="email"
                                 type="email"
                                 label="Email"
                                 placeholder="Enter your email"
+                                disabled={loading}
                             />
                         </div>
                         <Submit
                             title="Update me"
-                            loading={false}
-                            disabled={false}
+                            loading={loading}
                         />
                     </div>
                 )}

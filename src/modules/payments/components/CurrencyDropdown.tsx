@@ -6,7 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "@/modules/core/components/ui/dropdown-menu";
 import { Search, ChevronDown } from "lucide-react";
-import { CURRENCY_OPTIONS } from "../data/currencies";
+import { CURRENCY_OPTIONS } from "../data";
 
 
 type CurrencyDropdownProps = {

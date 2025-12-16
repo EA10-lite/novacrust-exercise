@@ -32,14 +32,16 @@ export function PaymentTabs() {
                         Crypto to fiat loan
                     </TabsTrigger>
                 </TabsList>
-                <TabsContent value="crypto-to-cash">
-                    <CryptoToCash />
-                </TabsContent>
-                <TabsContent value="cash-to-crypto">
-                    <CashToCrypto />
-                </TabsContent>
-                <TabsContent value="crypto-to-fiat-loan">
-                </TabsContent>
+                <div className="min-h-[600px]">
+                    <TabsContent value="crypto-to-cash" className="mt-0">
+                        <CryptoToCash />
+                    </TabsContent>
+                    <TabsContent value="cash-to-crypto" className="mt-0">
+                        <CashToCrypto />
+                    </TabsContent>
+                    <TabsContent value="crypto-to-fiat-loan" className="mt-0">
+                    </TabsContent>
+                </div>
             </Tabs>
         </div>
     )

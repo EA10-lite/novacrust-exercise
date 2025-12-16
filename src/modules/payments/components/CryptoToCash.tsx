@@ -1,32 +1,27 @@
 import { CustomSelect, Submit } from "@/modules/core/components/forms";
 import { Formik } from "formik";
 import PaymentInput from "./PaymentInput";
+import { useState } from "react";
+import { PAYMENT_OPTIONS } from "../data";
+import { cryptoToCashValidation } from "../validation";
 
-
-const PAYMENT_OPTIONS = [
-    {
-        title: "Metmask",
-        value: "metmask",
-        icon: "/assets/images/metamask.svg",
-    },
-    {
-        title: "Rainbow",
-        value: "rainbow",
-        icon: "/assets/images/rainbow.svg",
-    },
-    {
-        title: "WalletConnect",
-        value: "walletconnect",
-        icon: "/assets/images/wallet-connect.svg",
-    },
-    {
-        title: "Others",
-        value: "other",
-        icon: "/assets/images/others.svg",
-    },
-]
+type CryptoToCashFormValues = {
+    payFrom: string;
+    payTo: string;
+    amount: number;
+    receiveAmount: number;
+    amountCurrency: string;
+    receiveAmountCurrency: string;
+}
 
 const CryptoToCash = () => {
+    const [loading, setLoading] = useState<boolean>(false);
+    const handleSubmit = async (values: CryptoToCashFormValues) => {
+        console.log(values);
+        setLoading(true);
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setLoading(false);
+    }
     return (
         <div className="py-[32px]">
             <Formik
@@ -38,9 +33,8 @@ const CryptoToCash = () => {
                     amountCurrency: "",
                     receiveAmountCurrency: "",
                 }}
-                onSubmit={(values)=> {
-                    console.log(values);
-                }}
+                onSubmit={handleSubmit}
+                validationSchema={cryptoToCashValidation}
             >
                 {()=> (
                     <div className="">
@@ -71,7 +65,7 @@ const CryptoToCash = () => {
                         </div>
                         <Submit
                             title="Convert now"
-                            loading={false}
+                            loading={loading}
                         />
                     </div>
                 )}

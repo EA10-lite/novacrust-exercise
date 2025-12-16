@@ -13,10 +13,10 @@ const PaymentInput = ({
     label,
     currencyFieldName,
 }: PaymentInputProps) => {
-    const { values, setFieldValue } = useFormikContext<FormikValues>();
+    const { values, setFieldValue , errors, touched } = useFormikContext<FormikValues>();
     const currencyName = currencyFieldName || `${name}Currency`;
     return (
-        <div className="mb-5">
+        <div className={`mb-5 ${errors[name] && touched[name] ? "border-error text-error bg-opacity-50 text-black error-input" : ""}`}>
             <div className="rounded-[24px] border border-[#E0E0E0] p-[24px]">
                 <Label
                     name={name}
